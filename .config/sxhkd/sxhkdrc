@@ -1,0 +1,53 @@
+#Basic Binds
+#Passmenu
+super + u
+	passmenu --type
+#Passmenu copy
+super + U
+	passmenu
+#Lock
+super + F11
+	slock
+#Terminal Shortcut
+super + Return
+	$TERMINAL
+#Launch Transmission
+super + T 
+	transmission-qt
+
+#Launch dmenu
+super + p
+	dmenu_run
+
+#Launch web browser
+super + w
+	$BROWSER
+#Launch surf
+super + s
+	surf
+
+#Launch E-mail
+super + e
+	$TERMINAL -e neomutt
+
+#Launch Music[ncmpcpp]
+super + O 
+	$TERMINAL -e ncmpcpp
+
+#Launch Music[mpdmenu]
+super + o
+	mpdmenu
+
+#Check Weather
+super + F12
+	weather
+
+# Audiokeys
+XF86AudioMute
+	amixer sset Master toggle; 
+XF86Audio{Raise,Lower}Volume
+	amixer sset Master 5%{+,-}; 
+XF86Audio{Next,Prev}
+	mpc {next,prev}
+XF86Audio{Play}
+	mpc {toggle}
