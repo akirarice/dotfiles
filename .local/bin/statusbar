@@ -1,6 +1,5 @@
 #!/bin/sh
-battery=$(cat /sys/class/power_supply/BAT0/capacity)
 while true; do
-	xsetroot -name "BAT $battery $(dwm_resources) $(dwm_alsa) $(date '+%x %R') "
+	xsetroot -name " $(dwm_resources) $(dwm_alsa) $(date '+%x %R') "
 	sleep 1s
 done
