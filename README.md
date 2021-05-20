@@ -1,5 +1,5 @@
 # Akira's dotfiles
-These are the dotfiles I deploy on my machines. Meant to be used with Arch-Linux and it's variants. I run Parabola when possible.  
+These are the dotfiles I deploy on my machines. Meant to be used with Arch-Linux and its variants. I run Parabola when possible.  
 
 # Programs
 -SXHKD for keyboard shortcuts  
