@@ -5,6 +5,6 @@ These are the dotfiles I deploy on my machines. Meant to be used with Arch-Linux
 -SXHKD for keyboard shortcuts  
 -feh for wallpaper generation  
 -zsh shell  
--xorg for xserver
+-xorg for xserver  
 -the bin contains scripts that configure my statusbar in dwm
 
