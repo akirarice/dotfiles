@@ -24,7 +24,9 @@ super + w
 	$BROWSER
 #Launch surf
 super + s
-	surf
+	bookmarksurf
+	
+	
 
 #Launch E-mail
 super + e

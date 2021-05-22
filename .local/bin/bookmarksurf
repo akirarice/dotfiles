@@ -1,0 +1,4 @@
+#!/bin/sh
+bookmark=$(cat ".config/surf/bookmarks" | dmenu "$@")
+[[ -n $bookmark ]] || exit
+surf $bookmark
