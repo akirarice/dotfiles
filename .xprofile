@@ -1,10 +1,1 @@
-#!/bin/sh
-picom --no-fading-openclose &
-feh --bg-fill -z ~/.local/share/Wallpapers &
-sxhkd &
-unclutter &
-setxkbmap -options caps:escape &
-amixer sset Master 25% &
-statusbar &
-2screen &
-xautolock -time 20 -locker slock &
+/home/akn/.config/x11/xprofile
