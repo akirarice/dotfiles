@@ -1,10 +1,8 @@
 #!/bin/sh
-dwm &
-picom --no-fading-openclose &
-feh --bg-fill -z ~/.local/share/Wallpapers &
-sxhkd &
-unclutter &
-setxkbmap -options caps:escape &
-amixer sset Master 25% &
-statusbar &
-xautolock -time 20 -locker slock
+if [ -f "${XDG_CONFIG_HOME:-$HOME/.config}/x11/xprofile" ]; then
+	. "${XDG_CONFIG_HOME:-$HOME/.config}/x11/xprofile"
+else
+	. "$HOME/.xprofile"
+fi
+
+dwm
