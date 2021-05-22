@@ -6,5 +6,4 @@ unclutter &
 setxkbmap -options caps:escape &
 amixer sset Master 25% &
 statusbar &
-#xrandr --output HDMI1 --auto --output HDMI3 --auto --right-of HDMI1 &
 xautolock -time 20 -locker slock &
