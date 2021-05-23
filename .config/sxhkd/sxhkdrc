@@ -21,7 +21,7 @@ super + p
 
 #Launch web browser
 super + w
-	$BROWSER
+	tabbed surf -e	
 #Launch surf
 super + s
 	bookmarksurf

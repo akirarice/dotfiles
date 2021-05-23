@@ -1,4 +1,8 @@
 #!/bin/sh
 bookmark=$(cat ".config/surf/bookmarks" | dmenu "$@")
 [[ -n $bookmark ]] || exit
-surf $bookmark
+if curl -s --head  --request GET $bookmark | grep "HTTP" > /dev/null; then 
+  tabbed -r2 surf -e x $bookmark 
+else
+ tabbed -r2 surf -e x "https://searx.bar/search?q=""$bookmark"
+fi
