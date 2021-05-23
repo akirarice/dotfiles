@@ -14,23 +14,19 @@ super + Return
 #Launch Transmission
 super + T 
 	transmission-qt
-
 #Launch dmenu
 super + p
 	dmenu_run
 
-#Launch web browser
+#Launch bookmark + search browser
 super + w
-	tabbed surf -e	
-#Launch surf
-super + s
 	bookmarksurf
-	
-	
-
-#Launch E-mail
-super + e
-	$TERMINAL -e neomutt
+#Launch Browser
+super + W
+	tabbed surf -e	
+#Launch Newsboat
+super + n
+	$TERMINAL -e newsboat
 
 #Launch Music[ncmpcpp]
 super + O 
@@ -39,10 +35,6 @@ super + O
 #Launch Music[mpdmenu]
 super + o
 	mpdmenu
-
-#Check Weather
-super + F12
-	weather
 
 # Audiokeys
 XF86AudioMute

@@ -3,6 +3,7 @@ picom --no-fading-openclose &
 feh --bg-fill -z ~/.local/share/Wallpapers &
 sxhkd &
 unclutter &
+dunst &
 setxkbmap -options caps:escape &
 amixer sset Master 25% &
 statusbar &
