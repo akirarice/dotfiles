@@ -6,5 +6,6 @@ unclutter &
 dunst &
 setxkbmap -options caps:escape &
 amixer sset Master 25% &
+mpd &
 statusbar &
 xautolock -time 20 -locker slock &

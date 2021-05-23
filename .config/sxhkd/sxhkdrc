@@ -21,6 +21,10 @@ super + p
 #Launch bookmark + search browser
 super + w
 	bookmarksurf
+#Add yanked text to bookmarks
+super + Y
+	bookmarker
+
 #Launch Browser
 super + W
 	tabbed surf -e	
