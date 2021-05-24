@@ -20,10 +20,10 @@ super + p
 
 #Launch bookmark + search browser
 super + w
-	bookmarksurf
+	bookmarksurf.sh
 #Add yanked text to bookmarks
 super + Y
-	bookmarker
+	bookmarker.sh
 
 #Launch Browser
 super + W

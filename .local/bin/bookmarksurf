@@ -1,8 +1,0 @@
-#!/bin/sh
-bookmark=$(paste -d ' ' ~/.config/surf/bookmarks ~/.config/surf/bookmark_titles | cut -d ';' -f1 | dmenu -i -l 30) 
-[[ -n $bookmark ]] || exit
-if curl -s --head  --request GET "$bookmark" | grep "HTTP" > /dev/null; then 
-  tabbed -r2 surf -e x $bookmark 
-else
- tabbed -r2 surf -e x "https://searx.bar/search?q=""$bookmark"
-fi
