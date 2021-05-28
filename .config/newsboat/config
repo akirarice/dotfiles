@@ -1,6 +1,6 @@
 #show-read-feeds no
 auto-reload yes
-
+feed-sort-order lastupdated
 external-url-viewer "urlscan -dc -r 'linkhandler {}'"
 
 bind-key j down

@@ -73,4 +73,4 @@ case "$mode" in
     playlist)
         mpc play "$(d_playlist)" >/dev/null
     ;;
-esac 
+esac

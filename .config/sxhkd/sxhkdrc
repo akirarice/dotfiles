@@ -17,17 +17,18 @@ super + T
 #Launch dmenu
 super + p
 	dmenu_run
-
-#Launch bookmark + search browser
-super + w
-	bookmarksurf.sh
+#Launch dvim
+super + P
+	dvim
 #Add yanked text to bookmarks
-super + Y
-	bookmarker.sh
-
+super + Y 
+	bookmarker.sh	
 #Launch Browser
 super + W
 	tabbed surf -e	
+#Launch Browser menu
+super + w
+	bookmarksurf.sh
 #Launch Newsboat
 super + n
 	$TERMINAL -e newsboat

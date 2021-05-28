@@ -1,11 +1,11 @@
 #!/bin/sh
-picom --no-fading-openclose &
+picom --no-fading-openclose --inactive-opacity 0.60 &
 feh --bg-fill -z ~/.local/share/Wallpapers &
 sxhkd &
 unclutter &
 dunst &
 setxkbmap -options caps:escape &
-amixer sset Master 25% &
+amixer sset Master 20% &
 mpd &
 statusbar &
 xautolock -time 20 -locker slock &
