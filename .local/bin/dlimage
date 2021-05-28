@@ -1,0 +1,12 @@
+#!/bin/sh
+image=$(xclip -o -selection clipboard)
+dir=$(printf "Downloads\\nWallpapers" | dmenu)
+case $dir in
+	Downloads) wget --directory-prefix=$XDG_DOWNLOADS "$image";;
+		#setwp=$(printf "Yes\\nNo"| dmenu -i -p "Set Wallpaper?")
+		#[[ "$setwp" = "Yes"]] && feh --bg-fill
+	Wallpapers) wget --directory-prefix=$WALLPAPERS "$image";;
+	*) wget "$image";;
+esac
+notify-send "$image saved to $dir"
+echo $dir

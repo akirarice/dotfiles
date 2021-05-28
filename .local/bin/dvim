@@ -1,0 +1,6 @@
+#!/bin/sh
+folder=$(printf "Media\\nDownloads\\n.config\\n.local\\n." | dmenu -i) 
+[[ -n $folder ]] || exit
+selection=$(find "$folder" | dmenu -l 20)
+[[ -n $selection ]] || exit
+$TERMINAL -e nvim $selection
