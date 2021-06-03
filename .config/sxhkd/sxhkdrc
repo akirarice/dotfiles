@@ -1,10 +1,13 @@
 #Basic Binds
+#Reset wallpapers
+super + v
+	sxiv -t $WALLPAPERS
 #Passmenu
 super + u
-	passmenu --type
+	passmenu --type -h 40 
 #Passmenu copy
 super + U
-	passmenu
+	passmenu-otp --type
 #Lock
 super + F11
 	slock
@@ -14,9 +17,6 @@ super + Return
 #Launch Transmission
 super + T 
 	transmission-qt
-#Launch dmenu
-super + p
-	dmenu_run
 #Launch dvim
 super + P
 	dvim
@@ -32,7 +32,9 @@ super + w
 #Launch Newsboat
 super + n
 	$TERMINAL -e newsboat
-
+#Launch dmenu
+super + p
+	dmenu_run -h 40
 #Launch Music[ncmpcpp]
 super + O 
 	$TERMINAL -e ncmpcpp
@@ -46,7 +48,7 @@ XF86AudioMute
 	amixer sset Master toggle; 
 XF86Audio{Raise,Lower}Volume
 	amixer sset Master 5%{+,-}; 
-XF86Audio{Next,Prev}
+super + {Right,Left}
 	mpc {next,prev}
-XF86Audio{Play}
+super + Home
 	mpc {toggle}

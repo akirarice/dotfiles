@@ -10,7 +10,7 @@ dwm_mpc () {
 
         if [ "$IDENTIFIER" = "unicode" ]; then
             if [ "$STATUS" = "[playing]" ]; then
-                STATUS=""
+                STATUS=""
             else
                 STATUS=""
             fi
@@ -34,7 +34,7 @@ dwm_mpc () {
             fi
         fi
         
-        printf "%s%s %s - %s %s%s" "$SEP1" "$STATUS" "$ARTIST" "$TRACK" "$SHUFFLE" "$SEP2"
+        printf "%s%s %s %s%s" "$SEP1" "$STATUS" "$ARTIST" "$SHUFFLE" "$SEP2"
     fi
 }
 

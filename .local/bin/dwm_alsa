@@ -20,7 +20,7 @@ dwm_alsa () {
 	        elif [ "$VOL" -gt 33 ] && [ "$VOL" -le 66 ]; then
 	            printf " %s%%" "$VOL"
 	        else
-	            printf " %s%%" "$VOL"
+	            printf "  %s%%" "$VOL"
 	        fi
 		fi
     else

@@ -14,7 +14,9 @@ alias \
 	recordff="ffmpeg -f x11grab -s 1020x1080 -i :0.0" \
 	ffmpeg="ffmpeg -hide_banner" \
 	pacuni="doas pacman -Rns" \
-	config="/usr/bin/git --git-dir=$HOME/dotfiles --work-tree=$HOME"
+	config="/usr/bin/git --git-dir=$HOME/dotfiles --work-tree=$HOME" \
+	dmenu_h="dmenu -h 40" \
+	rss="$TERMINAL -e newsboat"
 
 # Colorize commands when possible.
 alias \

@@ -1,6 +1,22 @@
 #!/bin/sh
-folder=$(printf "Media\\nDownloads\\n.config\\n.local\\n." | dmenu -i) 
+
+folder=$(printf "Media\\nDownloads\\n.config\\n.local\\n." | dmenu -h 40 -i)
+
 [[ -n $folder ]] || exit
-selection=$(find "$folder" | dmenu -l 20)
+
+selection=$(find "$folder" | dmenu -h 40 -l 20)
+
 [[ -n $selection ]] || exit
-$TERMINAL -e nvim $selection
+
+[[ -d "$selection" ]] && cd "$selection" && "$TERMINAL" && exit
+
+case "$selection" in
+	*mkv|*webm|*mp4|*gif)
+		setsid -f mpv -quiet "$selection" >/dev/null 2>&1 ;;
+	*png|*jpg|*jpe|*jpeg|*gif)
+		sxiv "$selection" ;;
+	*pdf|*cbz|*cbr)
+		zathura "$selection" ;;
+	*)
+		[ -f "$selection" ] && setsid -f "$TERMINAL" -e "$EDITOR" "$selection" >/dev/null 2>&1
+esac
