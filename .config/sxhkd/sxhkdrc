@@ -14,6 +14,9 @@ super + F11
 #Launch dvim
 alt + P
 	dvim
+#Launch dmenu
+alt + p
+	dmenu_run -h 40
 #Add yanked text to bookmarks
 super + Y 
 	bookmarker.sh	
