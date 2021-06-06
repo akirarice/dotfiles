@@ -11,14 +11,8 @@ super + U
 #Lock
 super + F11
 	slock
-#Terminal Shortcut
-super + Return
-	$TERMINAL
-#Launch Transmission
-super + T 
-	transmission-qt
 #Launch dvim
-super + P
+alt + P
 	dvim
 #Add yanked text to bookmarks
 super + Y 
@@ -32,9 +26,6 @@ super + w
 #Launch Newsboat
 super + n
 	$TERMINAL -e newsboat
-#Launch dmenu
-super + p
-	dmenu_run -h 40
 #Launch Music[ncmpcpp]
 super + O 
 	$TERMINAL -e ncmpcpp

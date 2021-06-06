@@ -1,5 +1,6 @@
 #!/bin/sh
-picom --no-fading-openclose --inactive-opacity 0.60 &
+picom --no-fading-openclose &
+mpd &
 feh --bg-fill -z ~/.local/share/Wallpapers &
 xrdb ${XDG_CONFIG_HOME:-$HOME/.config}/x11/xresources &
 sxhkd &
@@ -7,7 +8,6 @@ unclutter &
 dunst &
 setxkbmap -options caps:escape &
 amixer sset Master 15% &
-mpd &
 #statusbar &
 slstatus 2>&1 >/dev/null &
 xautolock -time 20 -locker slock &
