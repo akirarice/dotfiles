@@ -22,7 +22,7 @@ super + Y
 	bookmarker.sh	
 #Launch Browser
 super + W
-	tabbed surf -e	
+	tabbed -cr2 surf -e x duckduckgo.com
 #Launch Browser menu
 super + w
 	bookmarksurf.sh
