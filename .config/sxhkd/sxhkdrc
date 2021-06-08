@@ -2,40 +2,18 @@
 #Reset wallpapers
 super + v
 	sxiv -t $WALLPAPERS
-#Passmenu
-super + u
-	passmenu --type -h 40 
 #Passmenu copy
 super + U
 	passmenu-otp --type
 #Lock
 super + F11
 	slock
-#Launch dvim
-alt + P
-	dvim
-#Launch dmenu
-alt + p
-	dmenu_run -h 40
 #Add yanked text to bookmarks
 super + Y 
 	bookmarker.sh	
-#Launch Browser
-super + W
-	tabbed -cr2 surf -e x duckduckgo.com
-#Launch Browser menu
-super + w
-	bookmarksurf.sh
-#Launch Newsboat
-super + n
-	$TERMINAL -e newsboat
 #Launch Music[ncmpcpp]
 super + O 
 	$TERMINAL -e ncmpcpp
-
-#Launch Music[mpdmenu]
-super + o
-	mpdmenu
 #vm toggle
 super + F1
 virsh -c qemu:///system {start,shutdown} winvm

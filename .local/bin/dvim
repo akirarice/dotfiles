@@ -1,10 +1,10 @@
 #!/bin/sh
-
-folder=$(printf "Media\\nDownloads\\n.config\\n.local\\n." | dmenu -h 40 -i)
+[[ $1 ]] && mon=$1 || mon=0
+folder=$(printf "Media\\nDownloads\\n.config\\n.local\\n." | dmenu -m $mon -h 40 -i)
 
 [[ -n $folder ]] || exit
 
-selection=$(find "$folder" | dmenu -h 40 -l 20)
+selection=$(find "$folder" | dmenu -m $mon -h 40 -l 20)
 
 [[ -n $selection ]] || exit
 
