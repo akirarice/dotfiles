@@ -24,3 +24,8 @@ alias \
 	grep="grep --color=auto" \
 	diff="diff --color=auto" \
 	ccat="highlight --out-format=ansi"
+
+# alias for vm toggle
+alias \
+	winstart="virsh -c qemu:///system start winvm" \
+	winstop="virsh -c qemu:///system stop winvm"

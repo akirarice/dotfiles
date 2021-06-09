@@ -1,28 +1,13 @@
 #Basic Binds
-#Reset wallpapers
-super + v
-	sxiv -t $WALLPAPERS
-#Passmenu copy
-super + U
-	passmenu-otp --type
-#Lock
-super + F11
-	slock
-#Add yanked text to bookmarks
-super + Y 
-	bookmarker.sh	
-#Launch Music[ncmpcpp]
-super + O 
-	$TERMINAL -e ncmpcpp
 #vm toggle
 super + F1
 virsh -c qemu:///system {start,shutdown} winvm
 # Audiokeys
-XF86AudioMute
-	amixer sset Master toggle; 
-XF86Audio{Raise,Lower}Volume
-	amixer sset Master 5%{+,-}; 
-super + {Right,Left}
-	mpc {next,prev}
-super + Home
-	mpc {toggle}
+#XF86AudioMute
+#	amixer sset Master toggle; 
+#XF86Audio{Raise,Lower}Volume
+#	amixer sset Master 5%{+,-}; 
+#super + {Right,Left}
+#	mpc {next,prev}
+#super + Home
+#	mpc {toggle}
