@@ -1,6 +1,6 @@
 #!/bin/sh
 [[ $1 ]] && mon=$1 || mon=0
-folder=$(printf "Media\\nDownloads\\n.config\\n.local\\n." | dmenu -m $mon -h 40 -i)
+folder=$(printf "Media\\nDownloads\\nrepos\\n.config\\n.local\\n." | dmenu -m $mon -h 40 -i)
 
 [[ -n $folder ]] || exit
 
