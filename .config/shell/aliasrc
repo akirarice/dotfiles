@@ -27,5 +27,5 @@ alias \
 
 # alias for vm toggle
 alias \
-	winstart="virsh -c qemu:///system start winvm" \
-	winstop="virsh -c qemu:///system stop winvm"
+	winstart="virsh -c qemu:///system start winvm && lscreen" \
+	winstop="virsh -c qemu:///system shutdown winvm"
