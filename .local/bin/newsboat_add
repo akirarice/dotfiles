@@ -1,6 +1,6 @@
 #!/bin/sh
 selection=$(xclip -o -selection p)
-name=$(printf "" | dmenu -p "Label of URL Selection")
+name=$(printf "" | dmenu -p "Label of URL Selection: $selection")
 [[ -n $name ]] || exit
 echo "#""$name" >> ~/.config/newsboat/urls
 if [[ $selection == *"youtube"* ]]; then

@@ -1,11 +1,11 @@
 #!/bin/sh
 [[ $1 ]] && mon=$1 || mon=0
-action=$(printf "Start\\nStop" | dmenu -m $mon -i -h 40 -p "Choose VM Action")
+action=$(printf "Start\\nShutdown" | dmenu -m $mon -i -h 40 -p "Choose VM Action")
 [[ -n $action ]] || exit
 
 case $action in
 	Start)
 		virsh -c qemu:///system start winvm && lscreen ;;
-	Stop)
+	Shutdown)
 		virsh -c qemu:///system shutdown winvm && 2screen ;;
 esac
