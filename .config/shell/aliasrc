@@ -29,3 +29,8 @@ alias \
 alias \
 	winstart="virsh -c qemu:///system start winvm && lscreen" \
 	winstop="virsh -c qemu:///system shutdown winvm"
+
+# pass alias
+alias \
+	PassPush="pass git push origin master" \
+	PassUpdate="pass generate -i"
