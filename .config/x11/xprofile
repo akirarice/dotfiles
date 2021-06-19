@@ -1,10 +1,10 @@
 #!/bin/sh
-picom --no-fading-openclose &
+#picom --no-fading-openclose &
 mpd &
 feh --bg-fill -z ~/.local/share/Wallpapers &
 xrdb ${XDG_CONFIG_HOME:-$HOME/.config}/x11/xresources &
 unclutter &
 dunst &
-amixer sset Master 15% &
+amixer sset Master 20% &
 slstatus 2>&1 >/dev/null &
 xautolock -time 20 -locker slock &

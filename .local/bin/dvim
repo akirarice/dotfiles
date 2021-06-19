@@ -1,14 +1,14 @@
 #!/bin/sh
-[[ $1 ]] && mon=$1 || mon=0
+[ -n "$1" ] && mon=$1 || mon=0
 folder=$(printf "Media\\nDownloads\\nrepos\\n.config\\n.local\\n." | dmenu -m $mon -h 40 -i)
 
-[[ -n $folder ]] || exit
+[ -n "$folder" ] || exit
 
 selection=$(find "$folder" | dmenu -m $mon -h 40 -l 20)
 
-[[ -n $selection ]] || exit
+[ -n "$selection" ] || exit
 
-[[ -d "$selection" ]] && cd "$selection" && "$TERMINAL" && exit
+[ -d "$selection" ] && cd "$selection" && "$TERMINAL" && exit
 
 case "$selection" in
 	*mkv|*webm|*mp4|*gif)
