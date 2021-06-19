@@ -1,11 +1,18 @@
 #!/bin/sh
 selection=$(xclip -o -selection p)
 name=$(printf "" | dmenu -h 40 -p "Label of URL Selection: $selection")
-[[ -n $name ]] || exit
+[ -n "$name" ] || exit
 echo "#""$name" >> ~/.config/newsboat/urls
-if [[ $selection == *"youtube"* ]]; then
-	youtubeid=$(printf "$selection" | cut -d '/' -f 5)
-	echo "https://www.youtube.com/feeds/videos.xml?channel_id=""$youtubeid" >> ~/.config/newsboat/urls && notify-send "$name youtube channel added to newsboat"
-else
-	echo $selection >> ~/.config/newsboat/urls && notify-send "$name added to newsboat"
-fi
+case $selection in 
+	*youtube*) youtubeid=$(printf "$selection" | cut -d '/' -f 5) 
+		echo "https://www.youtube.com/feeds/videos.xml?channel_id=""$youtubeid" >> ~/.config/newsboat/urls && 
+			notify-send "$name youtube channel added to newsboat" ;;
+		*) echo $selection >> ~/.config/newsboat/urls && notify-send "$name added to newsboat"
+esac
+
+#if [[ $selection == *"youtube"* ]]; then
+#	youtubeid=$(printf "$selection" | cut -d '/' -f 5)
+#	echo "https://www.youtube.com/feeds/videos.xml?channel_id=""$youtubeid" >> ~/.config/newsboat/urls && notify-send "$name youtube channel added to newsboat"
+#else
+#	echo $selection >> ~/.config/newsboat/urls && notify-send "$name added to newsboat"
+#fi

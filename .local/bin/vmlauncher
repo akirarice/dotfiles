@@ -1,8 +1,7 @@
 #!/bin/sh
-[[ $1 ]] && mon=$1 || mon=0
+[ -n "$1" ] && mon=$1 || mon=0
 action=$(printf "Start\\nShutdown" | dmenu -m $mon -i -h 40 -p "Choose VM Action")
-[[ -n $action ]] || exit
-
+[ -n "$action" ] || exit
 case $action in
 	Start)
 		virsh -c qemu:///system start winvm && lscreen ;;
