@@ -1,7 +1,7 @@
 #!/bin/sh
 [ -n "$1" ] && mon=$1 || mon=0
 while true; do 
-	bookmark=$(printf "Bookmarks\\nSwitch Browser\\nYouTube\\nDuckDuckGo\\nbol" | dmenu -m $mon -h 40 -i) ; [ "$bookmark" != "" ] || exit 
+	bookmark=$(printf "Bookmarks\\nSwitch Browser\\nYouTube\\nDuckDuckGo\\nbol" | dmenu -m $mon -h 40 -i) ; [ -n "$bookmark" ] || exit 
 	case $bookmark in
 		YouTube) choice=$(printf "" | dmenu -m $mon -h 40 -i -p "Youtube") 
 			[ -n "$choice" ] && link="https://www.youtube.com/results?search_query=""$choice" || exit ; break ;;

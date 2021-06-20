@@ -1,4 +1,5 @@
 #!/bin/sh
+xdotool="xdotool type --clearmodifiers --file -"
 pass_in=pass
 typeit=0
 mon=0
@@ -18,12 +19,14 @@ while [ -n "$1" ]; do
 	esac
 done
 
-password=$(find "$HOME"/.password-store/ -name "*.gpg" | sed "s/\/home\/$USER\/.password-store\///g;s/.gpg//g" | dmenu -m "$mon" -h 40 -i -l 10)
+password=$(find "$HOME"/.password-store/ -name "*.gpg" | 
+	sed "s/\/home\/$USER\/.password-store\///g;s/.gpg//g" | 
+	dmenu -m "$mon" -h 40 -i -l 10)
 
 [ -n "$password" ] || exit
 
 if [ "$typeit" -eq 0 ]; then
         $pass_in show -c "$password" 2>/dev/null
-else
-	xdotool type "$($pass_in "$password")" 
+else 
+	$pass_in show "$password" | { IFS= read -r pass; printf %s "$pass"; } | $xdotool
 fi
