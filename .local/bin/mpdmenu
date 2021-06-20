@@ -1,7 +1,11 @@
 #!/bin/sh
 [ -n "$1" ] && mon=$1 || mon=0
-selection=$(mpc list artist | dmenu -m $mon -h 40 -i -p "Artist" | xargs -I {} mpc list album artist "{}" | dmenu -m $mon -h 40 -i -p "Album" | xargs -I {} mpc find album "{}" | sort)  
+artist=$(mpc list artist | dmenu -m $mon -h 40 -i -p "Artist") 
+[ -n "$artist" ] || exit
+album=$(mpc list album artist "$artist" | dmenu -m $mon -h 40 -i -p "Album")
+[ -n "$album" ] || exit
+selection=$(mpc find album "$album" | sort)  
 [ -n "$selection" ] || exit
 mpc clear
-printf "$selection" | mpc add
+printf "%s" "$selection" | mpc add
 mpc play

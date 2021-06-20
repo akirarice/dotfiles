@@ -2,7 +2,6 @@
 pass_in=pass
 typeit=0
 mon=0
-
 while [ -n "$1" ]; do 
 	case "$1" in 
 		--type) typeit=1 
@@ -28,4 +27,3 @@ if [ "$typeit" -eq 0 ]; then
 else
 	xdotool type "$($pass_in "$password")" 
 fi
-
