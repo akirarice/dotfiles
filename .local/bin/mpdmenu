@@ -5,7 +5,6 @@ artist=$(mpc list artist | dmenu -m $mon -h 40 -i -p "Artist")
 album=$(mpc list album artist "$artist" | dmenu -m $mon -h 40 -i -p "Album")
 [ -n "$album" ] || exit
 selection=$(mpc find album "$album" | sort)  
-[ -n "$selection" ] || exit
 mpc clear
 printf "%s" "$selection" | mpc add
 mpc play

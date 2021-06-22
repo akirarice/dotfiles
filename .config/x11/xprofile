@@ -1,8 +1,8 @@
 #!/bin/sh
 #picom --no-fading-openclose &
 mpd &
-feh --bg-fill -z ~/.local/share/Wallpapers &
-xrdb ${XDG_CONFIG_HOME:-$HOME/.config}/x11/xresources &
+feh --bg-fill -z "$WALLPAPERS" &
+xrdb "${XDG_CONFIG_HOME:-$HOME/.config}"/x11/xresources &
 unclutter &
 dunst &
 amixer sset Master 20% &

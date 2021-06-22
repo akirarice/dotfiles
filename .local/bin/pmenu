@@ -21,12 +21,12 @@ done
 
 password=$(find "$HOME"/.password-store/ -name "*.gpg" | 
 	sed "s/\/home\/$USER\/.password-store\///g;s/.gpg//g" | 
-	dmenu -m "$mon" -h 40 -i -l 10)
+	dmenu -m "$mon" -h 40 -i -l 10 -p "$pass_in")
 
 [ -n "$password" ] || exit
 
 if [ "$typeit" -eq 0 ]; then
         $pass_in show -c "$password" 2>/dev/null
 else 
-	$pass_in show "$password" | { IFS= read -r pass; printf %s "$pass"; } | $xdotool
+	xdotool type "$($pass_in show "$password" | sed '1!d')"
 fi

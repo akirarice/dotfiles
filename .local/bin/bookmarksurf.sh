@@ -3,13 +3,13 @@
 while true; do 
 	bookmark=$(printf "Bookmarks\\nSwitch Browser\\nYouTube\\nDuckDuckGo\\nbol" | dmenu -m $mon -h 40 -i) ; [ -n "$bookmark" ] || exit 
 	case $bookmark in
-		YouTube) choice=$(printf "" | dmenu -m $mon -h 40 -i -p "Youtube") 
+		YouTube) choice=$(printf "" | dmenu -m $mon -h 40 -i -p "Youtube ") 
 			[ -n "$choice" ] && link="https://www.youtube.com/results?search_query=""$choice" || exit ; break ;;
-		DuckDuckGo) choice=$(printf "" | dmenu -m $mon -h 40 -p " DuckDuckGo") 
+		DuckDuckGo) choice=$(printf "" | dmenu -m $mon -h 40 -p " DuckDuckGo ") 
 			[ -n "$choice" ] && link="https://duckduckgo.com/?q=""$choice" || exit ; break ;; 
-		1337x) choice=$(printf "" | dmenu -m $mon -h 40 -p " 1337x") 
+		1337x) choice=$(printf "" | dmenu -m $mon -h 40 -p " 1337x ") 
 			[ -n "$choice" ] && link="https://1337x.to/search/""$choice""/1/" || exit ; break ;; 
-		bol) choice=$(printf "" | dmenu -m $mon -h 40 -p " bol") 
+		bol) choice=$(printf "" | dmenu -m $mon -h 40 -p " bol ") 
 			[ -n "$choice" ] && link="https://www.bol.com/nl/s/?searchtext=""$choice" || exit ; break ;; 
 		"Switch Browser") newbrowser=$(printf "brave\\nsurf\\nicecat" | dmenu -m $mon -h 40 -i -p "Choose Browser") ;; 
 		Bookmarks) 
