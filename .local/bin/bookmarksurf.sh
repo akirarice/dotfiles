@@ -1,10 +1,12 @@
 #!/bin/sh
 [ -n "$1" ] && mon=$1 || mon=0
 while true; do 
-	bookmark=$(printf "Bookmarks\\nSwitch Browser\\nYouTube\\nDuckDuckGo\\nbol" | dmenu -m $mon -h 40 -i) ; [ -n "$bookmark" ] || exit 
+	bookmark=$(printf "Bookmarks\\nSwitch Browser\\nYouTube\\nOdysee\\nDuckDuckGo\\nbol" | dmenu -m $mon -h 40 -i) ; [ -n "$bookmark" ] || exit 
 	case $bookmark in
 		YouTube) choice=$(printf "" | dmenu -m $mon -h 40 -i -p "Youtube ") 
 			[ -n "$choice" ] && link="https://www.youtube.com/results?search_query=""$choice" || exit ; break ;;
+		Odysee) choice=$(printf "" | dmenu -m $mon -h 40 -i -p "Odysee ") 
+			[ -n "$choice" ] && link="https://www.odysee.com/$/search?q=""$choice" || exit ; break ;;
 		DuckDuckGo) choice=$(printf "" | dmenu -m $mon -h 40 -p " DuckDuckGo ") 
 			[ -n "$choice" ] && link="https://duckduckgo.com/?q=""$choice" || exit ; break ;; 
 		1337x) choice=$(printf "" | dmenu -m $mon -h 40 -p " 1337x ") 
@@ -16,8 +18,8 @@ while true; do
 			if [ -s "$BOOKMARKS"/bookmark_titles ]; then 
 				entry=$(dmenu -m $mon -i -l 10 < "$BOOKMARKS"/bookmark_titles) 
 				[ -n "$entry" ] || exit 
-				idx=$(grep -nx "$entry" "$BOOKMARKS"/bookmark_titles | cut -f1 -d:)
-				[ -n "$idx" ] && link=$(sed "$idx"'!d' "$BOOKMARKS"/bookmarks) && break || link="$entry" ; break
+				idx=$(grep -nx "$entry" "$BOOKMARKS"/bookmark_titles)
+				[ -n "$idx" ] && link=$(sed "${idx%%:*}"'!d' "$BOOKMARKS"/bookmarks) && break || link="$entry" ; break
 			else 
 				link=$(dmenu -m $mon -h 40 -p "Search/URL") ; break
 			fi ;;
