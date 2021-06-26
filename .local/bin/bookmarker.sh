@@ -1,7 +1,6 @@
 #!/bin/sh
 bookmark=$(xclip -o -selection p)
 title=$(wget -qO- "$bookmark" | grep -o -P '(?<=<title>).*(?=</title>)')
-
 [ -z "$title" ] && notify-send "url title not found" 
 curl -s --head --request --fail "$bookmark" || notify-send "warning: url not valid" 
 
