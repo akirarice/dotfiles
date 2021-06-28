@@ -34,3 +34,6 @@ alias \
 alias \
 	PassPush="pass git push origin master" \
 	PassUpdate="pass generate -i"
+
+alias \
+	WebPull="rsync -a akn@akiranakano.info:/var/www/ ~/Website"
