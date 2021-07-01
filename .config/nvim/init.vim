@@ -12,3 +12,4 @@ Plug 'ap/vim-css-color'
 call plug#end()
 
 syntax on
+autocmd BufRead,BufNewFile ~/Website/main/blog/* setlocal spell spelllang=en_us

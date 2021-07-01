@@ -1,0 +1,5 @@
+#!/bin/sh
+repl=$(grep "<li>" "$HOME/Website/main/blogindex.html" | sed 5q | tr -d '\n' | sed -e 's/[\/&]/\\&/g')
+sed -i "s/<!--BLOG-->.*/<!--BLOG-->$repl/g" ~/Website/main/index.html
+
+rsync -avrP --delete-after --rsh='ssh' ~/Website/main/ akn@akiranakano.xyz:/var/www/main/
