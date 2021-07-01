@@ -1,7 +1,8 @@
 #!/bin/sh
 #picom --no-fading-openclose &
 mpd &
-feh --bg-fill -z "$WALLPAPERS" &
+#feh --bg-fill -z "$WALLPAPERS" &
+xwallpaper --zoom $(find $WALLPAPERS -type f | shuf -n 1) &
 xrdb "${XDG_CONFIG_HOME:-$HOME/.config}"/x11/xresources &
 unclutter &
 dunst &
