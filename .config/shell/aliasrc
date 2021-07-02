@@ -37,5 +37,3 @@ alias \
 
 alias \
 	WebPull="rsync -a akn@akiranakano.info:/var/www/ ~/Website"
-
-alias setbg="xwallpaper --zoom $(find $WALLPAPERS -type f | shuf -n 1)" 
