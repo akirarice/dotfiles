@@ -9,6 +9,6 @@ do
         "C-c")
                 echo -n "$file" | xclip -selection clipboard ;;
         "C-b")
-                feh --bg-fill "$file" ;;
+                xwallpaper --zoom "$file" ;;
         esac
 done
