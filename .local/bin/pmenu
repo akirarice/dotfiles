@@ -26,7 +26,7 @@ password=$(find "$HOME"/.password-store/ -name "*.gpg" |
 [ -n "$password" ] || exit
 
 if [ "$typeit" -eq 0 ]; then
-        $pass_in show -c "$password" 2>/dev/null
+        $pass_in show -c "$password" 2>/dev/null && notify-send "Copied $password to clipboard. Will clear in 45 seconds."
 else 
 	xdotool type "$($pass_in show "$password" | sed '1!d')"
 fi
