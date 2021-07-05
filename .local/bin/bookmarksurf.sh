@@ -1,7 +1,9 @@
 #!/bin/sh
 [ -n "$1" ] && mon=$1 || mon=0
+brvfile=$HOME/.config/BraveSoftware/Brave-Browser/Default/Bookmarks
+[ -n "$brvfile" ] && bvb="Brave Bookmarks" || bvb=""
 while true; do 
-	bookmark=$(printf "Bookmarks\\nSwitch Browser\\nYouTube\\nOdysee\\nDuckDuckGo\\nbol" | dmenu -m $mon -h 40 -i) ; [ -n "$bookmark" ] || exit 
+	bookmark=$(printf "Bookmarks\\nSwitch Browser\\nYouTube\\nOdysee\\nDuckDuckGo\\nbol\\n%s" "$bvb" | dmenu -m $mon -h 40 -i) ; [ -n "$bookmark" ] || exit 
 	case $bookmark in
 		YouTube) choice=$(printf "" | dmenu -m $mon -h 40 -i -p "Youtube ") 
 			[ -n "$choice" ] && link="https://www.youtube.com/results?search_query=""$choice" || exit ; break ;;
@@ -23,6 +25,11 @@ while true; do
 			else 
 				link=$(dmenu -m $mon -h 40 -p "Search/URL") ; break
 			fi ;;
+		"Brave Bookmarks")
+			brv_bm=$(grep -B1 '"type": "url"' ~/.config/BraveSoftware/Brave-Browser/Default/Bookmarks | 
+				grep "name" | sed "s/\s.\"name\"://g;s/\"//g;s/,//g;s/^[ \t]*//" | dmenu -m $mon -ix -l 20)
+			[ -n "$brv_bm" ] && newbrowser="brave" || exit
+			link=$(grep '"url":' ~/.config/BraveSoftware/Brave-Browser/Default/Bookmarks | sed "s/\s.*\/\///g;s/\"//g;$brv_bm!d") ; break ;;
 		*) link="$bookmark" ; break ;;
 	esac
 done
