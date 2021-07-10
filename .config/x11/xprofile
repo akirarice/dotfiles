@@ -8,4 +8,4 @@ unclutter &
 dunst &
 amixer sset Master 20% &
 slstatus 2>&1 >/dev/null &
-xautolock -time 20 -locker slock &
+xautolock -time 45 -locker slock &
