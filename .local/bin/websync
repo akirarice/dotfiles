@@ -1,5 +1,5 @@
 #!/bin/sh
-repl=$(grep "<li>" "$HOME/Website/akiranakano/blogindex.html" | sed 5q | tr -d '\n' | sed -e 's/[\/&]/\\&/g')
-sed -i "s/<!--BLOG-->.*/<!--BLOG-->$repl/g" ~/Website/akiranakano/index.html
+repl=$(grep "<li>" "$HOME/Website/akira/blogindex.html" | sed 5q | tr -d '\n' | sed -e 's/[\/&]/\\&/g')
+sed -i "s/<!--BLOG-->.*/<!--BLOG-->$repl/g" ~/Website/akira/index.html
 
-rsync -avrP --delete-after --rsh='ssh' ~/Website/akiranakano/ root@akiranakano.xyz:/var/www/akiranakano/
+rsync -avrP --delete-after --rsh='ssh' ~/Website/akira/ root@akiranakano.xyz:/var/www/akira/

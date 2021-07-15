@@ -1,0 +1,2 @@
+#!/bin/sh
+xwallpaper --zoom $(find "$WALLPAPERS" -type f | shuf -n 1)
