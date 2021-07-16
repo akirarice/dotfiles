@@ -1,2 +1,2 @@
 #!/bin/sh
-rsync -urv ~/Music/ ~/usb/Music/ && notify-send "Music Synced!"
+rsync -urv ~/Music/ ~/usb/Music/ && notify-send " Music Synced" "Phone can be disconnected."
