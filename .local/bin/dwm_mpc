@@ -34,7 +34,7 @@ dwm_mpc () {
             fi
         fi
         
-        printf "%s%s %s %s%s" "$SEP1" "$STATUS" "$ARTIST" "$SHUFFLE" "$SEP2"
+        printf "%s%s %s %s%s- %s" "$SEP1" "$STATUS" "$ARTIST" "$SHUFFLE" "$SEP2" "$TRACK"
     fi
 }
 
