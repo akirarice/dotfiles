@@ -36,3 +36,4 @@ alias \
 	PassUpdate="pass generate -i"
 
 alias weather="curl wttr.in"
+alias xmr="curl rate.sx/xmr@90d"

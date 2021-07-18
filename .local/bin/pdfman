@@ -1,0 +1,4 @@
+#!/bin/sh
+selection=$(man -k . | sed 's/[(].[)]//g' | dmenu -l 10 | awk '{print $1}')
+[ -n "$selection" ] || exit
+man -Tpdf "$selection" | zathura -
