@@ -12,11 +12,11 @@ selection=$(find "$folder" | dmenu -m $mon -h 40 -l 20)
 
 case "$selection" in
 	*mkv|*webm|*mp4|*gif)
-		setsid -f mpv -quiet "$selection" >/dev/null 2>&1 ;;
+		mpv -quiet "$selection" >/dev/null 2>&1 ;;
 	*png|*jpg|*jpe|*jpeg)
 		sxiv "$selection" ;;
 	*pdf|*cbz|*cbr)
 		zathura "$selection" ;;
 	*)
-		[ -f "$selection" ] && setsid -f "$TERMINAL" -e "$EDITOR" "$selection" >/dev/null 2>&1
+		[ -f "$selection" ] && "$TERMINAL" -e "$EDITOR" "$selection" >/dev/null 2>&1
 esac
