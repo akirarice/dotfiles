@@ -1,5 +1,6 @@
 #!/bin/sh
-picom --no-fading-openclose &
+nvidia-settings --load-config-only &
+picom &
 mpd &
 #feh --bg-fill -z "$WALLPAPERS" &
 xwallpaper --zoom $(find $WALLPAPERS -type f | shuf -n 1) &

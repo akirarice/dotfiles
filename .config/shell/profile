@@ -1,5 +1,5 @@
 #!/bin/sh
-export PATH="$PATH:${$(find ~/.local/bin -type d -printf %p:)%%:}"
+export PATH="$PATH:$(find ~/.local/bin -type d -printf %p:)"
 export EDITOR="nvim"
 export TERMINAL="st"
 export BROWSER="surf" 
@@ -15,4 +15,3 @@ export WALLPAPERS="$HOME/.local/share/Wallpapers"
 export LANG="en_US.UTF-8"
 export IDENTIFIER="unicode"
 v4l2-ctl --set-ctrl power_line_frequency=1
-[ "$(tty)" = "/dev/tty1" ] && ! pidof Xorg >/dev/null 2>&1  && exec startx "$XINITRC"
