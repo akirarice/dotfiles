@@ -38,4 +38,4 @@ dwm_mpc () {
     fi
 }
 
-dwm_mpc
+dunstify -r "991048" 'Now Playing' "$(dwm_mpc)"

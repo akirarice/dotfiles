@@ -1,1 +1,1 @@
-/home/akn/.config/shell/profile
+.config/shell/profile

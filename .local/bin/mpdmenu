@@ -7,4 +7,4 @@ album=$(mpc list album artist "$artist" | dmenu -m $mon -h 40 -l 10 -i -p "Album
 selection=$(mpc find album "$album")  
 mpc clear
 printf "%s" "$selection" | mpc add
-mpc play
+mpc play & dwm_mpc

@@ -15,7 +15,7 @@ while true; do
 			[ -n "$choice" ] && link="https://1337x.to/search/""$choice""/1/" || exit ; break ;; 
 		Bol) choice=$(printf "" | dmenu -m $mon -h 40 -p " Bol ") 
 			[ -n "$choice" ] && link="https://www.bol.com/nl/s/?searchtext=""$choice" || exit ; break ;; 
-		"Switch Browser") newbrowser=$(printf "brave\\nsurf\\nicecat" | dmenu -m $mon -h 40 -i -p "Choose Browser") ;; 
+		"Switch Browser") newbrowser=$(printf "chromium" | dmenu -m $mon -h 40 -i -p "Choose Browser") ;; 
 		Bookmarks) 
 			if [ -s "$BOOKMARKS"/bookmark_titles ]; then 
 				entry=$(dmenu -m $mon -i -l 10 < "$BOOKMARKS"/bookmark_titles) 

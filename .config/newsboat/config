@@ -29,7 +29,7 @@ color article white default bold
 
 macro , open-in-browser
 macro v set browser "setsid -f mpv %u &" ; open-in-browser-noninteractively ; 
-macro b set browser "setsid -f brave %u &" ; open-in-browser-noninteractively ;
+macro b set browser "setsid -f chromium %u &" ; open-in-browser-noninteractively ;
 
 highlight all "---.*---" yellow
 highlight feedlist ".*(0/0))" black
