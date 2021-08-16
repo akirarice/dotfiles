@@ -1,11 +1,15 @@
 #!/bin/sh
-slstatus 2>&1 >/dev/null &
-picom &
+#slstatus 2>&1 >/dev/null &
 mpd &
+picom &
 #feh --bg-fill -z "$WALLPAPERS" &
 xwallpaper --zoom $(find $WALLPAPERS -type f | shuf -n 1) &
 xrdb "${XDG_CONFIG_HOME:-$HOME/.config}"/x11/xresources &
 unclutter &
 dunst &
-pamixer --set-volume 25 &
 xautolock -time 45 -locker slock &
+avd-mpdup &
+avdd 'mpcd vol-amixer dt' &
+avds 'dt' m true &
+avd-pamixer --set-volume 20 &
+avd-mpd-start &

@@ -1,5 +1,0 @@
-#!/bin/sh
-while true; do
-	xsetroot -name "   $(dwm_mpc) $(dwm_alsa) $(date '+%m/%d %R') "
-	sleep 1s
-done
