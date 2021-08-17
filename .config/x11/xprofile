@@ -12,4 +12,3 @@ avd-mpdup &
 avdd 'mpcd vol-amixer dt' &
 avds 'dt' m true &
 avd-pamixer --set-volume 20 &
-avd-mpd-start &
