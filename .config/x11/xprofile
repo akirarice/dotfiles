@@ -1,14 +1,14 @@
 #!/bin/sh
 #slstatus 2>&1 >/dev/null &
 mpd &
-picom &
+picom --backend glx --xrender-sync-fence --no-fading-openclose &
 #feh --bg-fill -z "$WALLPAPERS" &
 xwallpaper --zoom $(find $WALLPAPERS -type f | shuf -n 1) &
 xrdb "${XDG_CONFIG_HOME:-$HOME/.config}"/x11/xresources &
 unclutter &
 dunst &
 xautolock -time 45 -locker slock &
-avd-mpdup &
-avdd 'mpcd vol-amixer dt' &
-avds 'dt' m true &
+pidof -x avd-mpdup >/dev/null || avd-mpdup &
+pidof -x avdd >/dev/null || avdd 'mpcd vol-amixer dt' &
+pidof -x avds >/dev/null || avds 'dt' m true &
 avd-pamixer --set-volume 20 &
