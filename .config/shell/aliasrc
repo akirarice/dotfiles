@@ -38,4 +38,3 @@ alias \
 alias weather="curl wttr.in"
 alias xmr="curl rate.sx/xmr@90d"
 alias tm-music="transmission-cli -w ~/Music"
-alias pac-syu="doas timeshift --create && doas pacman -Syu"

@@ -11,8 +11,10 @@ dwm_mpc () {
         if [ "$IDENTIFIER" = "unicode" ]; then
             if [ "$STATUS" = "[playing]" ]; then
                 STATUS=""
-            else
+	    elif [ "$STATUS" = "[paused]" ]; then
                 STATUS=""
+	    else
+		STATUS=""
             fi
 
             if [ "$SHUFFLE" = "on" ]; then
