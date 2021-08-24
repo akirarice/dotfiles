@@ -8,12 +8,8 @@ https://www.youtube.com/feeds/videos.xml?channel_id=UCsXVk37bltHxD1rDPwtNM8Q sci
 https://www.youtube.com/feeds/videos.xml?channel_id=UCBJycsmduvYEL83R_U4JriQ tech
 #Mental Outlaw
 https://www.youtube.com/feeds/videos.xml?channel_id=UC7YOGHUfC1Tb6E4pudI9STA linux 
-#fantano
-https://www.youtube.com/feeds/videos.xml?channel_id=UCnxQ8o9RpqxGF2oLHcCn9VQ music 
 #dunkey
 https://www.youtube.com/feeds/videos.xml?channel_id=UCsvn_Po0SmunchJYOWpOxMg gaming 
-#theneedledrop
-https://www.youtube.com/feeds/videos.xml?channel_id=UCt7fwAhXDy3oNFTAzF2o8Pw music 
 #Coin Bureau
 https://www.youtube.com/feeds/videos.xml?channel_id=UCqK_GSMbpiV8spgD3ZGloSw crypto 
 #Ted-ed
@@ -44,8 +40,6 @@ https://www.youtube.com/feeds/videos.xml?channel_id=UCduKuJToxWPizJ7I2E6n1kA fit
 https://www.youtube.com/feeds/videos.xml?channel_id=UCD6VugMZKRhSyzWEWA9W2fg gaming
 #Jay Foreman
 https://www.youtube.com/feeds/videos.xml?channel_id=UCbbQalJ4OaC0oQ0AqRaOJ9g science
-#parabola
-https://www.parabola.nu/feeds/news/ linux
 #PBS Space Time
 https://www.youtube.com/feeds/videos.xml?channel_id=UC7_gcs09iThXybpVgjHZ_7g science
 #LockPickingLawyer
@@ -84,3 +78,9 @@ https://www.youtube.com/feeds/videos.xml?channel_id=UC5UAwBUum7CPN5buc-_N1Fw
 https://www.youtube.com/feeds/videos.xml?channel_id=UCGSGPehp0RWfca-kENgBJ9Q
 #Tom Scott
 https://www.youtube.com/feeds/videos.xml?channel_id=UCBa659QWEk1AI4Tg--mrJ2A
+#The Judgies
+https://www.youtube.com/feeds/videos.xml?channel_id=UCwDbo_sKQX-ymY3d-Q1HxGQ
+#linux kernel releases
+https://www.kernel.org/feeds/kdist.xml
+#Brave Browser Releases
+https://github.com/brave/brave-browser/releases.atom

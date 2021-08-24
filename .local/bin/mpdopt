@@ -1,0 +1,5 @@
+#!/bin/sh
+selection=$(printf "shuffle\\nrepeat" | dmenu -h 40 -i -p "Music Options")
+[ -z $selection ] && exit
+mpc "$selection" >/dev/null
+notify-send "Now Playing" "Music Option $selection toggled"

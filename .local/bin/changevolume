@@ -18,6 +18,4 @@ else
     dunstify -a "changeVolume" -u low -i audio-volume-high -r "$msgId" \
     -h int:value:"$volume" "Volume: ${volume}"
 fi
-avds vol-amixer
-# Play the volume changed sound
-canberra-gtk-play -i audio-volume-change -d "changeVolume"
+avds "vol-amixer"

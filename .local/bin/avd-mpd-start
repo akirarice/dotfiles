@@ -1,2 +1,2 @@
 #!/bin/sh
-sleep 5s && avd-mpdup
+sleep 5s && avd-mpdup & mpc toggle

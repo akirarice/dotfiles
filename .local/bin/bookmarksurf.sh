@@ -27,7 +27,7 @@ while true; do
 			fi ;;
 		"Brave Bookmarks")
 			brv_bm=$(grep -B1 '"type": "url"' ~/.config/BraveSoftware/Brave-Browser/Default/Bookmarks | 
-				grep "name" | sed "s/\s.\"name\"://g;s/\"//g;s/,//g;s/^[ \t]*//" | dmenu -m $mon -ix -l 20)
+				grep "name" | sed "s/\s.\"name\"://g;s/\"//g;s/,//g;s/^[ \t]*//" | dmenu -m $mon -i -ix -l 20)
 			[ -n "$brv_bm" ] && newbrowser="brave" || exit
 			link=$(grep '"url":' ~/.config/BraveSoftware/Brave-Browser/Default/Bookmarks | sed "s/\s.*\/\///g;s/\"//g;$brv_bm!d") ; break ;;
 		*) link="$bookmark" ; break ;;
