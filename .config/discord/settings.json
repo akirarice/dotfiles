@@ -1,13 +1,13 @@
 {
   "BACKGROUND_COLOR": "#202225",
-  "IS_MAXIMIZED": false,
+  "IS_MAXIMIZED": true,
   "IS_MINIMIZED": false,
   "WINDOW_BOUNDS": {
-    "x": 11,
-    "y": 36,
+    "x": 0,
+    "y": 168,
     "width": 1898,
-    "height": 1033
+    "height": 758
   },
   "OPEN_ON_STARTUP": false,
-  "MINIMIZE_TO_TRAY": false
+  "MINIMIZE_TO_TRAY": true
 }

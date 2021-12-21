@@ -3,19 +3,18 @@
 /usr/bin/pipewire &
 /usr/bin/pipewire-pulse &
 /usr/bin/pipewire-media-session &
-picom --backend glx --xrender-sync-fence --no-fading-openclose &
+#picom --refresh-rate 60 --no-fading-openclose &
 #feh --bg-fill -z "$WALLPAPERS" &
 mpd &
-xwallpaper --zoom $(find $WALLPAPERS -type f | shuf -n 1) &
+#xwallpaper --zoom $(find $WALLPAPERS -type f | shuf -n 1) &
 xrdb "${XDG_CONFIG_HOME:-$HOME/.config}"/x11/xresources &
 unclutter &
 dunst &
-pamixer --set-volume 20 &
 xautolock -time 45 -locker slock &
 mpc pause &
-killall avdd; killall avds; 
-avdd 'mpcd pac mem temp vol-amixer dt' &
-sleep 1s &&
-avds 'mem,temp' 1000 true &
-avds 'dt' m true &
-avd-mpdup &
+#killall avdd; killall avds; 
+#avdd 'mpcd pac mem temp vol-amixer dt' &
+#sleep 1s &&
+#avds 'mem,temp' 1000 true &
+#avds 'dt' m true &
+#avd-mpdup &

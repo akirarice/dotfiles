@@ -21,12 +21,12 @@ done
 
 password=$(find "$HOME"/.password-store/ -name "*.gpg" | 
 	sed "s/\/home\/$USER\/.password-store\///g;s/.gpg//g" | 
-	dmenu -m "$mon" -h 40 -i -l 10 -p "$pass_in")
+	dmenu -m "$mon" -i -l 10 -p "$pass_in")
 
 [ -n "$password" ] || exit
 
 if [ "$typeit" -eq 0 ]; then
-        $pass_in show -c "$password" 2>/dev/null && notify-send "Copied $password to clipboard. Will clear in 45 seconds."
+        $pass_in show -c "$password" 2>/dev/null && notify-send pass "Password copied; will clear in 45 seconds."
 else 
 	xdotool type "$($pass_in show "$password" | sed '1!d')"
 fi

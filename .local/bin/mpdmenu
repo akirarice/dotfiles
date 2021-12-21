@@ -1,13 +1,13 @@
 #!/bin/sh
 [ -n "$1" ] && mon=$1 || mon=0
-artist=$(mpc list artist | dmenu -m $mon -h 40 -l 10 -i -p "Artist") 
+artist=$(mpc list artist | dmenu -m $mon -l 10 -i -p "Artist") 
 [ -n "$artist" ] || exit
-album=$(mpc list album artist "$artist" | dmenu -m $mon -h 40 -l 10 -i -p "Album")
+album=$(mpc list album artist "$artist" | dmenu -m $mon -l 10 -i -p "Album")
 [ -n "$album" ] || exit
-choice=$(printf "Yes\\nNo" | dmenu -m $mon -h 40 -i -p "Play whole Album?")
+choice=$(printf "Yes\\nNo" | dmenu -m $mon -i -p "Play whole Album?")
 [ -n "$choice" ] || exit
 if [ "$choice" = "No" ]; then 
-	selection=$(mpc list title album "$album" | dmenu -m $mon -h 40 -l 10 -i -p "Track")
+	selection=$(mpc list title album "$album" | dmenu -m $mon -l 10 -i -p "Track")
 	selection=$(mpc find album "$album" title "$selection")
 else
 	selection=$(mpc find album "$album")
