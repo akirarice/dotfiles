@@ -1,0 +1,32 @@
+#!/bin/sh
+xdotool="xdotool type --clearmodifiers --file -"
+pass_in=pass
+typeit=0
+mon=0
+while [ -n "$1" ]; do 
+	case "$1" in 
+		--type) typeit=1 
+			shift
+			;; 
+		otp) pass_in="$pass_in otp"
+			shift
+			;;
+		-m)
+			shift
+			mon=$1
+			shift
+			;;
+	esac
+done
+
+password=$(find "$HOME"/.password-store/ -name "*.gpg" | 
+	sed "s/\/home\/$USER\/.password-store\///g;s/.gpg//g" | 
+	rofi -dmenu -p "$pass_in")
+
+[ -n "$password" ] || exit
+
+if [ "$typeit" -eq 0 ]; then
+        $pass_in show -c "$password" 2>/dev/null && notify-send pass "Password copied; will clear in 45 seconds."
+else 
+	xdotool type "$($pass_in show "$password" | sed '1!d')"
+fi
