@@ -1,6 +1,6 @@
-super + b
+alt + b
 	firefox
-super + shift + b
+alt + shift + b
 	firefox --private-window
 alt + p
 	rofi -show run
