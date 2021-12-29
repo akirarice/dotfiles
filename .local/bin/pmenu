@@ -21,7 +21,7 @@ done
 
 password=$(find "$HOME"/.password-store/ -name "*.gpg" | 
 	sed "s/\/home\/$USER\/.password-store\///g;s/.gpg//g" | 
-	 rofi -dmenu -l 10 -p "$pass_in")
+	 dmenu -l 10 -p "$pass_in")
 
 [ -n "$password" ] || exit
 
