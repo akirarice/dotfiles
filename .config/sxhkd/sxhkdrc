@@ -1,0 +1,15 @@
+#Shortcuts
+alt + b
+	firefox
+alt + shift + b
+	firefox --private-window
+alt + p
+	rofi -show run
+alt + shift + Return
+	st
+alt + u
+	pmenu-rofi --type
+alt + shift + u
+	pmenu-rofi otp --type
+alt + shift + c
+	wmctrl -c :ACTIVE:

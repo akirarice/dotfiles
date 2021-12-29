@@ -25,10 +25,7 @@ alias \
 	diff="diff --color=auto" \
 	ccat="highlight --out-format=ansi"
 
-# alias for vm toggle
-alias \
-	winstart="virsh -c qemu:///system start winvm && lscreen" \
-	winstop="virsh -c qemu:///system shutdown winvm"
+alias pacsyu="doas timeshift --create --comments "Update" --tags D && doas pacman -Syu"
 
 # pass alias
 alias \
