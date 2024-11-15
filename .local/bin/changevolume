@@ -11,11 +11,9 @@ pamixer "$@"
 volume="$(pamixer --get-volume-human)"
 mute="$(pamixer --get-mute)"
 if [ "$volume" = 0 ] || [ "$mute" = "true" ]; then
-    # Show the sound muted notification
-    dunstify -a "changeVolume" -u low -i audio-volume-muted -r "$msgId" "Volume muted"
+	echo "MUTE"
 else
-    # Show the volume notification
-    dunstify -a "changeVolume" -u low -i audio-volume-high -r "$msgId" \
-    -h int:value:"$volume" "Volume: ${volume}"
+	vol="$(pamixer --get-volume-human)"
+	echo "$vol"
 fi
 #avds vol-amixer

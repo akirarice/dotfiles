@@ -1,7 +1,7 @@
 #!/bin/sh
 
 # Use neovim for vim if present.
-command -v nvim >/dev/null && alias vim="nvim" vimdiff="nvim -d"
+command -v nvim >/dev/null && alias vimdiff="nvim -d"
 
 # Verbosity and settings that you pretty much just always are going to want.
 alias \
@@ -26,12 +26,6 @@ alias \
 	ccat="highlight --out-format=ansi"
 
 alias pacsyu="doas timeshift --create --comments "Update" --tags D && doas pacman -Syu"
-
-# pass alias
-alias \
-	PassPush="pass git push origin master" \
-	PassUpdate="pass generate -i"
-
 alias weather="curl wttr.in"
 alias xmr="curl rate.sx/xmr@90d"
 alias tm-music="transmission-cli -w ~/Music"
