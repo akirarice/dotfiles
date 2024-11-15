@@ -8,8 +8,8 @@ alt + p
 alt + shift + Return
 	st
 alt + u
-	pmenu-rofi --type
+	pmenu --type
 alt + shift + u
-	pmenu-rofi otp --type
+	pmenu otp --type
 alt + shift + c
 	wmctrl -c :ACTIVE:
