@@ -13,5 +13,9 @@ export XDG_DOWNLOADS="$HOME/Downloads"
 export WALLPAPERS="$HOME/Pictures/Wallpapers"
 export LANG="en_US.UTF-8"
 export IDENTIFIER="unicode"
+#export XDG_SESSION_TYPE=wayland
+#export GDK_BACKEND=wayland
+#export QT_QPA_PLATFORM=wayland
+#export CLUTTER_BACKEND=wayland
 #pass git pull origin master;
 #[ "$(tty)" = "/dev/tty1" ] && ! pidof -s Xorg >/dev/null 2>&1 && exec startx "$XINITRC"

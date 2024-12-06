@@ -1,4 +1,4 @@
-require("config.remap")
+require("config.keymaps")
 require("config.lazy")
-vim.cmd.colorscheme "catppuccin"
-vim.opt.guicursor = ""
+require("config.options")
+require("config.autocmds")

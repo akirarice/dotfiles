@@ -16,7 +16,9 @@ alias \
 	pacuni="doas pacman -Rns" \
 	config="/usr/bin/git --git-dir=$HOME/dotfiles --work-tree=$HOME" \
 	dmenu_h="dmenu -h 40" \
-	rss="$TERMINAL -e newsboat"
+    nb="newsboat && archAlerts.sh && pkill -RTMIN+9 waybar" \
+    pacup="sudo pacman -Syu && pkill -RTMIN+10 waybar"
+
 
 # Colorize commands when possible.
 alias \
@@ -25,7 +27,6 @@ alias \
 	diff="diff --color=auto" \
 	ccat="highlight --out-format=ansi"
 
-alias pacsyu="doas timeshift --create --comments "Update" --tags D && doas pacman -Syu"
 alias weather="curl wttr.in"
 alias xmr="curl rate.sx/xmr@90d"
 alias tm-music="transmission-cli -w ~/Music"
